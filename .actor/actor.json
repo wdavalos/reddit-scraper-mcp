@@ -1,0 +1,73 @@
+{
+  "$schema": "https://apify.com/schemas/v1/actor.ide.json",
+  "actorSpecification": 1,
+  "name": "reddit-scraper-mcp",
+  "title": "Reddit Scraper MCP",
+  "version": "1.0.0",
+  "description": "Reddit MCP for AI agents. Programmatic access to subreddit info, posts, comments, and search. Built for sentiment analysis, community intelligence, and market research.",
+  "buildTag": "latest",
+  "usesStandbyMode": true,
+  "meta": {
+    "templateId": "ts-standby",
+    "generatedBy": "apify-cli"
+  },
+  "dockerfile": "../Dockerfile",
+  "webServerMcpPath": "/mcp",
+  "defaultRunOptions": {
+    "build": "latest",
+    "memoryMbytes": 512,
+    "timeoutSecs": 3600
+  },
+  "input": {
+    "title": "Input schema",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+      "subreddit": {
+        "title": "Subreddit",
+        "type": "string",
+        "description": "Subreddit name (without r/)",
+        "default": "",
+        "prefill": "",
+        "editor": "textfield"
+      },
+      "tool": {
+        "title": "Tool",
+        "type": "string",
+        "description": "MCP tool to call: get_subreddit_info, get_posts, get_comments, search_reddit",
+        "default": "get_subreddit_info",
+        "prefill": "get_subreddit_info",
+        "editor": "textfield"
+      },
+      "sort": {
+        "title": "Sort",
+        "type": "string",
+        "description": "Sort order for posts: hot, new, top, rising",
+        "default": "hot",
+        "prefill": "hot",
+        "editor": "textfield"
+      },
+      "limit": {
+        "title": "Limit",
+        "type": "integer",
+        "description": "Max number of results (1-100)",
+        "default": 25,
+        "prefill": 25,
+        "editor": "textfield"
+      },
+      "query": {
+        "title": "Query",
+        "type": "string",
+        "description": "Search query (for search_reddit tool)",
+        "default": "",
+        "prefill": "",
+        "editor": "textfield"
+      }
+    },
+    "required": ["tool"]
+  },
+  "pricing": {
+    "model": "PAY_PER_EVENT"
+  },
+  "categories": ["MCP_SERVERS", "AI", "MARKET_INTELLIGENCE"]
+}

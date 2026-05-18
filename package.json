@@ -1,0 +1,28 @@
+{
+  "name": "reddit-scraper-mcp",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Reddit MCP for AI agents. Programmatic access to subreddit info, posts, comments, and search.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node src/main.js test"
+  },
+  "keywords": [
+    "apify",
+    "mcp",
+    "reddit",
+    "scraping",
+    "sentiment-analysis",
+    "market-intelligence",
+    "community-intelligence"
+  ],
+  "dependencies": {
+    "apify": "^3.6.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "author": "Apify",
+  "license": "MIT"
+}
