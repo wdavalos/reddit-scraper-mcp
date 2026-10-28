@@ -1,5 +1,6 @@
 # Reddit Scraper MCP
 
+> [ScraperFleet data page](https://scraperfleet.com/actors/reddit-scraper-mcp/)
 AI-native Reddit API for autonomous workflows. Programmatic access to subreddit info, posts, comments, and search.
 
 ## Tools
